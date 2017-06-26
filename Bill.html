@@ -1,0 +1,12 @@
+<html><body onload="printDiv('printableArea')"><div id="printableArea">
+      <h1>Print me123</h1>
+<input type="button" onclick="printDiv('printableArea')" value="print a div!" /></div><script>function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}</script></body></html>
